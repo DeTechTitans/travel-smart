@@ -1,0 +1,10 @@
+.card.border-warning {
+    transition: transform 0.3s ease;
+}
+
+.card.border-warning:hover {
+    transform: scale(1.05);
+}
+.bg-body-secondary{
+    background-color: whitesmoke !important;
+}

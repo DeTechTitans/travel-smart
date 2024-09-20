@@ -1,0 +1,41 @@
+ .carousel-inner {
+     position: relative;
+ }
+
+ image {
+     height: 90vh;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ .background-overlay:after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.616);
+     z-index: 1;
+ }
+
+ .overlay-text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 2;
+ }
+
+ .divider {
+     border: 1px solid #fff;
+     width: 20%;
+     margin: 8px auto;
+ }
+
+ .dividers {
+     border: 1px solid #fff;
+     width: 10%;
+     margin: 1px auto;
+ }
