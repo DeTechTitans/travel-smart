@@ -70,7 +70,7 @@ const Contact = () => {
 
     return (
         <div>
-            <section className="contact-us py-4" id="contactus" data-aos="fade-down">
+            <section className="contact-us py-4" id="Contactus" data-aos="fade-down">
                 <div className='text-center container py-lg-5'>
                     <h2 className='lead display-5 opacity-100 px-2 fw-bold'>Contact Us</h2>
                     <p className="divider border-black" />
@@ -97,7 +97,7 @@ const Contact = () => {
 
                                    
                                     <input
-                                        type="text"
+                                        type="number"
                                         className={`form-control px-lg-4 ${errors.phoneNumber ? 'is-invalid' : ''}`}
                                         name="phoneNumber"
                                         value={formData.phoneNumber}

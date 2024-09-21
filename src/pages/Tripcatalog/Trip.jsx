@@ -7,7 +7,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 const Trip = () => {
     useEffect(() => {
-        Aos.init(); 
+        Aos.init();
     }, []);
 
     return (
@@ -42,7 +42,7 @@ const Trip = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="" className="btn btn-outline-warning btn-lg mt-3">PURCHASE NOW</a>
+                                        <a className="btn btn-outline-warning btn-lg mt-3">PURCHASE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ const Trip = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="" className="btn btn-outline-warning btn-lg mt-3">PURCHASE NOW</a>
+                                        <a className="btn btn-outline-warning btn-lg mt-3">PURCHASE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ const Trip = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="" className="btn btn-outline-warning mt-3">PURCHASE NOW</a>
+                                        <a className="btn btn-outline-warning mt-3">PURCHASE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ const Trip = () => {
                 </div>
 
             </section>
-                <PackageReviews />
+            <PackageReviews />
             <Contact />
         </div>
     )
