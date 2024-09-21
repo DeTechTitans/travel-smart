@@ -27,7 +27,7 @@ const Nav = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-white">
-                <div className="container py-lg-4">
+                <div className="container py-lg-">
                     <a className="navbar-brand text-black lead display-5 fs-2 fw-bold my-lg-3" href="#">
                         Travel Smart
                     </a>
