@@ -1,8 +1,20 @@
-import React from 'react'
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import About from '../../About/About';
+import { Carousel } from 'react-bootstrap';
+import Spin from '../../Spinner/Spin';
 
 const Home = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000); 
+
+        return () => clearTimeout(timer); 
+    }, []);
+
+  
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js';
@@ -13,73 +25,77 @@ const Home = () => {
             document.body.removeChild(script);
         };
     }, []);
-    return (
-        < div>
-            <div id="carouselExampleCaptions" className="carousel slide background-overlay" data-bs-ride="carousel">
-                <div className="carousel-indicators" id='Home'>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active"
-                        aria-current="true" aria-label="Slide 1">
-                    </button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2">
-                    </button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3">
-                    </button>
-                </div>
 
-
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={"images/1.jpg"} className="img-fluid" alt="..." />
-                        <div className='overlay-text text-center'>
-                            <h3 className='text-center fw-bold lead display-3  text-light'>
-                                WELCOME OUR TRAVEL
-                            </h3>
-                            <div className='lead text-light my-lg-5'>
-                                <p>Explore a world of possibilities with our curated travel destinations. From serene beaches to bustling
-                                    cities, find your perfect escape.
-                                </p>
-                            </div>
-                            <p class="btn btn-outline-warning my-5">DISCOVER MORE</p>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className='overlay-text text-center'>
-                            <h3 className='text-center fw-bold lead display-3  text-light'>
-                                Personalized Travel Experiences
-
-                            </h3>
-                            <div className='lead text-light my-lg-5'>
-                                <p>Tailor your trip to your preferences. Whether you're seeking adventure, relaxation, or cultural
-                                    immersion, we have the perfect experience for you
-                                </p>
-                            </div>
-                            <p class="btn btn-outline-warning my-5">DISCOVER MORE</p>
-                        </div>
-                        <img src={"images/2.jpg"} className="img-fluid" alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                            <div className="hero-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className='overlay-text text-center'>
-                            <h3 className='text-center fw-bold lead display-3  text-light'>
-                                Book Smart, Travel Smarter
-                            </h3>
-                            <div className='lead text-light my-lg-5'>
-                                <p>Enjoy hassle-free travel planning with our easy-to-use booking platform. Compare flights, hotels, and
-                                    activities to find the best deals.
-                                </p>
-                            </div>
-                            <p class="btn btn-outline-warning my-5">DISCOVER MORE</p>
-                        </div>
-                        <img src={"images/3 (1).jpg"} className=" img-fluid" alt="..." />
-                    </div>
-                </div>
+    if (loading) {
+        return (
+            <div className="Big-Spinner d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+              <Spin/>
             </div>
-            <About />
-        </div>
-    )
-}
+        );
+    }
 
-export default Home
+    
+    return (
+        <>
+            <Carousel className="background-overlay">
+           
+                <Carousel.Item className="position-relative text-center">
+                    <img
+                        className="d-block w-100 img-fluid"
+                        src={"images/1.jpg"}
+                        alt="Sydney, Australia"
+                    />
+                    <Carousel.Caption className="d-lg-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle overlay-text text-center">
+                        <h3 className="display-5 text-white">WELCOME TO OUR TRAVEL</h3>
+                        <p className="lead text-white d-none  d-lg-flex">
+                            A beautiful coastal city with iconic landmarks like the Sydney Opera House and Bondi Beach.
+                        </p>
+                        <a href="#Travel Packages" className="btn btn-outline-warning mt-3 d-lg-flex d-none">
+                            Explore Sydney
+                        </a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+               
+                <Carousel.Item className="position-relative text-center">
+                    <img
+                        className="d-block w-100 img-fluid"
+                        src={"images/2.jpg"}
+                        alt="Kyoto, Japan"
+                    />
+                    <Carousel.Caption className="d-lg-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle overlay-text text-center">
+                        <h3 className="display-5 text-white">Kyoto, Japan</h3>
+                        <p className="lead text-white  d-none  d-lg-flex">
+                            A historic city known for its ancient temples, shrines, and traditional culture.
+                        </p>
+                        <a href="#Travel Packages" className="btn btn-outline-warning mt-3 d-lg-flex d-none">
+                            Discover Kyoto
+                        </a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+            
+                <Carousel.Item className="position-relative text-center">
+                    <img
+                        className="d-block w-100 img-fluid"
+                        src={"images/3.jpg"}
+                        alt="Dubai, UAE"
+                    />
+                    <Carousel.Caption className="d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle overlay-text text-center">
+                        <h3 className="display-5 text-white">Dubai, UAE</h3>
+                        <p className="lead text-white  d-none  d-lg-flex">
+                            A vibrant city known for luxury shopping, ultramodern architecture, and lively nightlife.
+                        </p>
+                        <a href="#Travel Packages" className="btn btn-outline-warning mt-3 d-lg-flex d-none">
+                            Experience Dubai
+                        </a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+
+            <About />
+        </>
+    );
+};
+
+export default Home;

@@ -1,25 +1,23 @@
- .navbar {
-     background-color: #f8f9fa;
-     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-     position: fixed;
-     width: 100%;
-     top: 0;
-     z-index: 1000;
- }
+.hr-gradient {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(114, 4, 4, 0.13) 1%, #bababa 50%, rgba(111, 39, 39, 0) 100%)
+}
 
- .nav-link {
-     transition: color 0.3s;
- }
+.nav-link {
+    transition: color 0.3s;
+}
 
- .nav-link:hover {
-     color: #17a2b8;
- }
+.nav-link:hover {
+    color: #17a2b8;
+}
 
- img {
-     transition: transform 0.3s ease, opacity 0.3s ease;
- }
+.collapse {
+    transition: height 8.3s ease;
+}
 
- img:hover {
-     transform: scale(0.9);
-     opacity: 0.7;
- }
+.navbar-collapse.show {
+    height: auto;
+    transition: height 0.1s ease;
+
+}

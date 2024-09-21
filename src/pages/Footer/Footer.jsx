@@ -1,105 +1,105 @@
 import React from 'react'
 import './Footer.css'
-import { FaEnvelope, FaFacebook, FaYoutube, FaTwitter, FaInstagram, FaLinkedin, FaLocationArrow, FaGlobe } from 'react-icons/fa'
+import { Carousel } from 'react-bootstrap';
+import parisImage from '../Images/New Delhi.avif';
+import tokyoImage from '../Images/tokyo.avif'
+import baliImage from '../Images/Amsterdam.avif'
+import {
+    FaFacebook, FaYoutube, FaTwitter, FaInstagram,
+    FaLinkedin, FaLocationArrow,
+    FaGlobe, FaEnvelope, FaPhoneSlash, FaAddressCard
+} from 'react-icons/fa'
 const Footer = () => {
+    const destinations = [
+        {
+            name: "New Delhi",
+            image: parisImage,
+            description: "a vibrant city known for its rich history, cultural diversity, and modern infrastructure."
+        },
+
+        {
+            name: "Tokyo",
+            image: tokyoImage,
+            description: "Immerse yourself in the bustling metropolis and rich traditions of Tokyo."
+        },
+        {
+            name: "Amsterdam",
+            image: baliImage,
+            description: "Relax on the tropical beaches and explore the vibrant culture of Amsterdam."
+        }
+    ];
     return (
-        <div className=''>
-            <footer className='bg-black'>
-                <div className='footer_container'>
-                    <div className='wrapper  py-lg-5 ' >
-                        <div className='footer_tab1 '>
-                            <img src={"img/logo.png"} alt="" />
-                            <div class="d-lg-flex gap-5 ">
-                                <div class=" container-lg d-flex gap-4 py-4 ">
-                                    <a href="https://web.facebook.com/UberSSA/?brand_redir=120945717945722&uclick_id=caba91ac-c5ae-47d5-8586-2f852fb7ac0f" id="" target='blank' className='text-light text-white link-secondary link-underline link-underline-opacity-25 link-underline-opacity-75-hover fw-light'>
-                                        <FaFacebook size={20} />
-                                    </a>
-
-                                    <a href="https://www.youtube.com/@AptechEducationKanina" className='text-light link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light' target='blank'>
-                                        <FaYoutube size={20} />
-                                    </a>
-                                    <a href="https://x.com/uber?uclick_id=caba91ac-c5ae-47d5-8586-2f852fb7ac0f&mx=2" className='text-light text-white link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light' target='blank'>
-                                        <FaTwitter size={20} />
-                                    </a>
-                                    <a href="https://www.instagram.com/uber/?uclick_id=caba91ac-c5ae-47d5-8586-2f852fb7ac0f" className='text-light text-white link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light' target='blank'>
-                                        <FaInstagram size={20} />
-                                    </a>
-                                    <a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F1815218%3Fuclick_id%3Dcaba91ac-c5ae-47d5-8586-2f852fb7ac0f" target='blank' className='text-light text-white link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light'>
-                                        <FaLinkedin size={20} />
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div className='copy_right opacity-25'>
-                                <p>© TECHTITANS © 2024. Privacy Policy</p>
-                            </div>
-                        </div>
-                        <div className='footer_tab2 '>
-                            <h2>Newsletter</h2>
-                            <p>Keep up with our always upcoming news and updates. Enter your e-mail and subscribe to our newsletter.</p>
-                            <form action="">
-                                <div class="mb-4 input-group">
-                                    <span class="input-group-text">
-                                        <FaEnvelope />
-                                    </span>
-                                    <input type="email" className="form-control" id="email" placeholder="E-mail" />
-                                    <button class="input-group-text w">
-                                        <span className="tt" data-bs-placement="right"
-                                            title="Enter an email address we can reply to">
-                                            <small className='fs-6'>SUBSCRIBE</small>
-                                        </span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div className='footer_tab3'>
-                            <h2> Cities</h2>
-                            <div className=' d-flex gap-3'>
-                                <ul className=' d-grid'>
-                                    <li id="">New York</li>
-                                    <li id="">Los Angeles</li>
-                                    <li id="">Washington</li>
-                                </ul>
-                                <ul className=' d-grid'>
-                                    <li id=""> San Diego</li>
-                                    <li id="">Boston</li>
-                                    <li id="">Chicago</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div className='footer_tab4'>
-                            <h2>Categories</h2>
-
+        <footer className='bg-dark text-light'>
+            <div className='footer_container container py-lg-5'>
+                <div className='wrapper row py-4'>
+                    <div className='col-lg-4 footer_tab1'>
+                        <p className="navbar-brand text-light fs-2 fw-bold">Travel Smart</p>
+                        <p className='opacity-75'>
+                            Join us in discovering beautiful places across the world. We make your travel experience easy and unforgettable!
+                        </p>
+                        <div className='d-flex gap-4 py-4'>
+                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                                <FaFacebook size={20} />
+                            </a>
+                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                                <FaYoutube size={20} />
+                            </a>
+                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                                <FaTwitter size={20} />
+                            </a>
+                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                                <FaInstagram size={20} />
+                            </a>
+                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                                <FaLinkedin size={20} />
+                            </a>
                         </div>
                     </div>
-                    <div class="justify-content-between py-5 ">
-                        <div className='d-lg-flex gap-5 d-none '>
-                            <a href="#sidebar" role="button" aria-controls="sidebar" data-bs-toggle="offcanvas" class="nav-link d-block">
-                                <FaGlobe className='text-light mx-2' />
-                                <span className='text-light text-white link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light '>English</span>
-                            </a>
-                            <a href="#sidebar" role="button" aria-controls="sidebar" data-bs-toggle="offcanvas" class="nav-link ">
-                                <FaLocationArrow className='text-light mx-2' />
-                                <span className='text-light text-white link-secondary link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-light'>Lagos</span>
-                            </a>
-                        </div>
-                        <div class="offcanvas offcanvas-top h-auto" tabindex='-1' id="sidebar" aria-labelledby="sidebar-label">
-                            <div class="offcanvas-header ">
-                                <div className=' container py-5'>
-                                    <h5 class="offCanvas-title fw-bolder" id="sidebar-label">Select your Preferred Language</h5>
-                                    <button class="btn btn-dark d-inline-block fw-semibold py-2 px-lg-5">
-                                        <span className=' text-start'>English</span>
-                                    </button>
-                                </div>
-                                <button type="button" class="btn-close position-sticky  " data-bs-dismiss="offcanvas" aria-label="close"></button>
-                            </div>
-                        </div>
+                    <div className='col-lg-3 footer_tab2'>
+                        <h4 className='text-light mb-3' id="About">About Us</h4>
+                        <p className='opacity-70'>
+                            Welcome to Travel Smart, your reliable companion in exploring the world with ease and confidence. We ensure seamless and enriching travel experiences for our customers.
+                        </p>
+                        <a href="/about" className="text-light fw-bold link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Learn more about us</a>
+                    </div>
+                    <div className='col-lg-2 footer_tab3'>
+                        <h4 className='text-light mb-3'>Newsletter</h4>
+                        <p className='opacity-75'>Stay updated with our latest travel deals and guides.</p>
+                        <form className='d-flex'>
+                            <input type="email" className='form-control me-2' placeholder="Your Email" />
+                            <button className='btn btn-warning'>Subscribe</button>
+                        </form>
+                    </div>
+                    <div className='col-lg-3 footer_tab4'>
+                        <h4 className='text-light mb-3'>Contact Us</h4>
+                        <p className="text-light"><FaEnvelope size={20} /> support@travelsmart.com</p>
+                        <p className="text-light"><FaPhoneSlash size={20} /> +234 76230 0213</p>
+                        <p className="text-light"><FaAddressCard size={20} /> 78 AKJ Lagos, Nigeria</p>
                     </div>
                 </div>
-
-            </footer>
-        </div>
+                <div className='my-4'>
+                    <h4 className='text-light mb-4'>Discover More Of Our Destinations</h4>
+                    <Carousel>
+                        {destinations.map((destination, index) => (
+                            <Carousel.Item key={index}>
+                                <img
+                                    className="d-block w-100"
+                                    src={destination.image}
+                                    alt={destination.name}
+                                />
+                                <Carousel.Caption>
+                                    <h3>{destination.name}</h3>
+                                    <p>{destination.description}</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </div>
+            </div>
+            <div className='bg-black py-2'>
+                <p className='text-center text-light mb-0'>© 2024 Travel Smart. All Rights Reserved | Privacy Policy</p>
+            </div>
+        </footer>
     )
 }
 

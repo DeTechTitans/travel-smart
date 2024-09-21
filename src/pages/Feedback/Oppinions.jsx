@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
-
+import StarRating from './StarRating'
 const Oppinions = () => {
   return (
     <>
@@ -25,19 +25,9 @@ const Oppinions = () => {
                     <label for="testimonial" className="form-label">Testimonial</label>
                     <textarea className="form-control" id="testimonial" rows="3" required></textarea>
                   </div>
-                  <div className="mb-0 d-lg-flex gap-5 py-lg-3">
-                    <div className="">
-                      <label for="rating" className="form-label "> Give us a rating</label>
-                    </div>
-
-                    <div id="starRating" className="">
-                      <span className="star" onclick="setRating(1)">&#9733;</span>
-                      <span className="star" onclick="setRating(2)">&#9733;</span>
-                      <span className="star" onclick="setRating(3)">&#9733;</span>
-                      <span className="star" onclick="setRating(4)">&#9733;</span>
-                      <span className="star" onclick="setRating(5)">&#9733;</span>
-                    </div>
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                  <div>
+                    <h1>Rate Us!</h1>
+                    <StarRating/>
                   </div>
                   <button type="submit" className="btn btn-outline-warning">Submit</button>
                 </form>
