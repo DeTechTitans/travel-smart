@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Trip from '../Tripcatalog/Trip'
 const About = () => {
     return (
@@ -11,7 +11,7 @@ const About = () => {
                             <img src={"images/540x540.jpg"} alt="Travelsmart" className="img-fluid mb-4 mb-lg-0" />
                         </div>
 
-                        <div className="col-lg-6 col-md-12 text-lg-start px-3" data-aos="fade-right">
+                        <div className="col-lg-6 col-md-12 text-lg-start px-3">
                             <div className="py-lg-5 my-lg-5 lh-lg">
                                 <h1 className="lead display-4 subtitle text-center text-lg-start">TRAVEL SMART</h1>
                                 <h1 className="title text-center text-lg-start">About Our Company</h1>
