@@ -1,19 +1,13 @@
 import React, { useEffect } from 'react'
 import Trip from '../Tripcatalog/Trip'
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-
 const About = () => {
-    useEffect(() => {
-        Aos.init(); 
-    }, []);
     return (
         <div>
             <section className="about-sec " id="About">
                 <div className="container py-lg-5">
                     <div className="d-lg-flex align-items-center">
 
-                        <div className="col-lg-6 col-md-12 " data-aos="fade-right">
+                        <div className="col-lg-6 col-md-12 ">
                             <img src={"images/540x540.jpg"} alt="Travelsmart" className="img-fluid mb-4 mb-lg-0" />
                         </div>
 
