@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import About from '../../About/About';
 import { Carousel } from 'react-bootstrap';
 import Spin from '../../Spinner/Spin';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const Home = () => {
+    useEffect(() => {
+        Aos.init();
+    }, []);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 2000); 
+        }, ); 
 
         return () => clearTimeout(timer); 
     }, []);
@@ -37,7 +44,7 @@ const Home = () => {
     
     return (
         <>
-            <Carousel className="background-overlay">
+            <Carousel className="background-overlay fade-down">
            
                 <Carousel.Item className="position-relative text-center">
                     <img
