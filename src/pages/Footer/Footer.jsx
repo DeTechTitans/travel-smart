@@ -38,19 +38,19 @@ const Footer = () => {
                             Join us in discovering beautiful places across the world. We make your travel experience easy and unforgettable!
                         </p>
                         <div className='d-flex gap-4 py-4'>
-                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                            <a href target='_blank' rel='noopener noreferrer' className='text-light'>
                                 <FaFacebook size={20} />
                             </a>
-                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                            <a href target='_blank' rel='noopener noreferrer' className='text-light'>
                                 <FaYoutube size={20} />
                             </a>
-                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                            <a href target='_blank' rel='noopener noreferrer' className='text-light'>
                                 <FaTwitter size={20} />
                             </a>
-                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                            <a href target='_blank' rel='noopener noreferrer' className='text-light'>
                                 <FaInstagram size={20} />
                             </a>
-                            <a href="" target='_blank' rel='noopener noreferrer' className='text-light'>
+                            <a href target='_blank' rel='noopener noreferrer' className='text-light'>
                                 <FaLinkedin size={20} />
                             </a>
                         </div>

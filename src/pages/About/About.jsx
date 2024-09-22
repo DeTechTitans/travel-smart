@@ -3,6 +3,7 @@ import Trip from '../Tripcatalog/Trip'
 const About = () => {
     return (
         <div>
+            
             <section className="about-sec " id="About">
                 <div className="container py-lg-5">
                     <div className="d-lg-flex align-items-center">
