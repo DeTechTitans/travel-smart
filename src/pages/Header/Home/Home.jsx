@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, ); 
+        },  ); 
 
         return () => clearTimeout(timer); 
     }, []);
@@ -85,8 +85,10 @@ const Home = () => {
                 <Carousel.Item className="position-relative text-center">
                     <img
                         className="d-block w-100 img-fluid"
-                        src={"images/3.jpg"}
+                        src={"images/5.jpg"}
                         alt="Dubai, UAE"
+                        style={{display:'none'
+                    }}
                     />
                     <Carousel.Caption className="d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle overlay-text text-center">
                         <h3 className="display-5 text-white">Dubai, UAE</h3>
@@ -99,8 +101,7 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-
-            <About />
+            <About/>
         </>
     );
 };

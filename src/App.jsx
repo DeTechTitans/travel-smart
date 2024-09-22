@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Nav from './pages/Header/Nav'
 import Home from './pages/Header/Home/Home'
+import About from './pages/About/About'
+
 import "./pages/Header/Home/Home.css"
 import "./pages/Tripcatalog/Trip.css"
 import "./pages/Header/Nav.css"
@@ -10,8 +12,9 @@ import "./pages/Feedback/StarRating.css"
 function App() {
   return (
     <>
-    <Nav/>
-    <Home/>
+      <Nav />
+      <Home />
+      
     </>
   )
 }

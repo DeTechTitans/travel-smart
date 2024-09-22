@@ -7,6 +7,7 @@
 .carousel-inner {
     position: relative;
 }
+
 .background-overlay:after {
     content: "";
     position: absolute;
